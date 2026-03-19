@@ -20,7 +20,7 @@ echo 'alias vi=nvim' >> ~/.bashrc
 # Bring in our custom neovim config
 echo "XDG_CONFIG_HOME=$HOME" >> ~/.profile
 # git clone https://github.com/shea-parkes/neovim-config ~/.config/nvim
-git clone https://github.com/Boltzee/LUNAR_NVIM_CONFIG.git ~/.config/nvim
+git clone https://oauth2:${NVIM_CONFIG_PAT}@github.com/Boltzee/LUNAR_NVIM_CONFIG.git ~/.config/nvim
 cd ~/.config/nvim
 git submodule init
 git submodule update
