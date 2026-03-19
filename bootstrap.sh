@@ -13,6 +13,7 @@ ln -sf ~/.local/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
 
 # Alias nvim
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+export PATH="$HOME/.local/bin:$PATH"
 echo 'alias vim=nvim' >> ~/.bashrc
 echo 'alias vi=nvim' >> ~/.bashrc
 
