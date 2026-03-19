@@ -27,10 +27,11 @@ git submodule update
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# Get Neovim mostly ready to go
-cd /workspaces/$RepositoryName
-# poetry run pip install pynvim ipython  # Avoid if we can help it
-poetry run nvim --headless +":UpdateRemotePlugins" +"q!"
+# if command -v poetry &>/dev/null; then
+#   REPO_NAME=$(basename "$CODESPACE_REPO_NAME")
+#   cd /workspaces/$REPO_NAME
+#   poetry run nvim --headless +":UpdateRemotePlugins" +"q!"
+# fi
 
 # Go ahead and configure vim as well while we're at it
 git clone https://github.com/shea-parkes/vim-config ~/.vim
