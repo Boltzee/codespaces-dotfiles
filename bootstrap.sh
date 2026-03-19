@@ -5,14 +5,16 @@ cp .gitconfig ~
 mkdir ~/.copilot
 cp copilot-instructions.md ~/.copilot/
 
-# ~Manually install NeoVim
-mkdir -p ~/.local
-cd ~/.local
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-chmod u+x nvim-linux-x86_64.appimage
-./nvim-linux-x86_64.appimage --appimage-extract
-mkdir ~/.local/bin
-ln -s ~/.local/squashfs-root/AppRun ~/.local/bin/nvim
+# Install NeoVim via tarball (container-friendly, no FUSE needed)
+mkdir -p ~/.local/bin
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+tar -xzf nvim-linux-x86_64.tar.gz -C ~/.local/
+ln -sf ~/.local/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
+
+# Alias nvim
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+echo 'alias vim=nvim' >> ~/.bashrc
+echo 'alias vi=nvim' >> ~/.bashrc
 
 # Bring in our custom neovim config
 echo "XDG_CONFIG_HOME=$HOME" >> ~/.profile
