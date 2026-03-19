@@ -22,6 +22,8 @@ cd ~/.config/nvim
 git submodule init
 git submodule update
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Get Neovim mostly ready to go
 cd /workspaces/$RepositoryName
 # poetry run pip install pynvim ipython  # Avoid if we can help it
