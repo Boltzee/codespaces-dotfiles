@@ -11,6 +11,17 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x8
 tar -xzf nvim-linux-x86_64.tar.gz -C ~/.local/
 ln -sf ~/.local/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
 
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Load nvm immediately in the script without restarting shell
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Install and use latest LTS
+nvm install --lts
+nvm use --lts
+
 # Alias nvim
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 export PATH="$HOME/.local/bin:$PATH"
