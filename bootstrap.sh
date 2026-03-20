@@ -37,6 +37,7 @@ git submodule init
 git submodule update
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 
 # if command -v poetry &>/dev/null; then
 #   REPO_NAME=$(basename "$CODESPACE_REPO_NAME")
