@@ -9,9 +9,9 @@ cp copilot-instructions.md ~/.copilot/
 
 # Install NeoVim via tarball (container-friendly, no FUSE needed)
 mkdir -p ~/.local/bin
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-tar -xzf nvim-linux-x86_64.tar.gz -C ~/.local/
-ln -sf ~/.local/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz
+tar -xzf nvim-linux64.tar.gz -C ~/.local/
+ln -sf ~/.local/nvim-linux64.tar.gz/bin/nvim ~/.local/bin/nvim
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
