@@ -29,6 +29,8 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 export PATH="$HOME/.local/bin:$PATH"
 echo 'alias vim=nvim' >> ~/.bashrc
 echo 'alias vi=nvim' >> ~/.bashrc
+# Add to bootstrap.sh
+echo "exec zsh" >> ~/.bashrc
 
 # Bring in our custom neovim config
 echo "XDG_CONFIG_HOME=$HOME" >> ~/.profile
