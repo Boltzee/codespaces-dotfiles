@@ -15,16 +15,12 @@ curl -LO https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64
 tar -xzf nvim-linux64.tar.gz -C ~/.local/
 ln -sf ~/.local/nvim-linux64/bin/nvim ~/.local/bin/nvim
 
-# Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
-# Load nvm immediately in the script without restarting shell
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# Install and use latest LTS
-nvm install --lts
-nvm use --lts
+# Install fnm
+curl -fsSL https://fnm.vercel.app/install | bash
+export PATH="$HOME/.local/share/fnm:$PATH"
+eval "$(fnm env)"
+fnm install --lts
+fnm use lts-latest
 
 # Alias nvim
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
