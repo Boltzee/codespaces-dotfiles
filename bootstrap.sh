@@ -7,6 +7,9 @@ cp .gitconfig ~
 mkdir ~/.copilot
 cp copilot-instructions.md ~/.copilot/
 
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 # Install NeoVim via tarball (container-friendly, no FUSE needed)
