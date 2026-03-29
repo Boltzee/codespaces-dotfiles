@@ -40,6 +40,13 @@ cd ~/.config/nvim
 git submodule init
 git submodule update
 
+
+git clone https://oauth2:${DOTFILES_KEY}@github.com/Boltzee/.dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+git submodule init
+git submodule update
+
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 
