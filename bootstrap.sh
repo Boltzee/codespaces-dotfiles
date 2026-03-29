@@ -7,6 +7,8 @@ cp .gitconfig ~
 mkdir ~/.copilot
 cp copilot-instructions.md ~/.copilot/
 
+curl -sS https://starship.rs/install.sh | sh
+
 # Install NeoVim via tarball (container-friendly, no FUSE needed)
 mkdir -p ~/.local/bin
 curl -LO https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz
