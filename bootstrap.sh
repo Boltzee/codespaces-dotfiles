@@ -52,7 +52,7 @@ rm -f ~/.config/fish/config.fish
 stow fish
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all --no-bash --no-zsh
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
