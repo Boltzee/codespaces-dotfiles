@@ -47,6 +47,9 @@ git clone https://oauth2:${DOTFILES_KEY}@github.com/Boltzee/.dotfiles.git ~/.dot
 cd ~/.dotfiles
 git submodule init
 git submodule update
+stow starship
+rm -f ~/.config/fish/config.fish
+stow fish
 
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
