@@ -16,8 +16,8 @@ tar -xzf nvim-linux64.tar.gz -C ~/.local/
 ln -sf ~/.local/nvim-linux64/bin/nvim ~/.local/bin/nvim
 
 # Install fnm
-curl -fsSL https://fnm.vercel.app/install | bash
-export PATH="$HOME/.local/share/fnm:$PATH"
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir ~/.local/bin --skip-shell 2>&1
+export PATH="$HOME/.local/bin:$PATH"
 eval "$(fnm env)"
 fnm install --lts
 fnm use lts-latest
