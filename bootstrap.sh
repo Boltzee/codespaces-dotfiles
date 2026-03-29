@@ -32,7 +32,7 @@ export PATH="$HOME/.local/bin:$PATH"
 echo 'alias vim=nvim' >> ~/.bashrc
 echo 'alias vi=nvim' >> ~/.bashrc
 # Add to bootstrap.sh
-echo "exec zsh" >> ~/.bashrc
+echo "exec fish" >> ~/.bashrc
 
 # Bring in our custom neovim config
 echo "XDG_CONFIG_HOME=$HOME" >> ~/.profile
@@ -74,8 +74,8 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 sudo rm -rf lazygit.tar.gz 
 
+sud apt update
+sudo apt install -y software-properties-common
+sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 sudo apt update
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
-sudo apt update
-sudo apt install fastfetch
+sudo apt install -y fastfetch
